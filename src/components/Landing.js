@@ -11,7 +11,7 @@ class Landing extends Component {
           <button>Register / Log In</button>
         </header>
         <article>
-          <h3>The StitchMate Way</h3>
+          <h3>The <i class="far fa-sticky-note"></i>StitchMate Way</h3>
           <section>
             <ul>
               <li>
