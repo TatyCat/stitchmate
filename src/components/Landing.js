@@ -36,16 +36,6 @@ class Landing extends Component {
           </section>
         </article>
 
-        <footer class="w3-container w3-light-grey w3-center w3-margin-top">
-          <p class="w3-medium w3-wide">Contact - Follow - Donate:</p>
-          <p class="w3-large">
-            <a href="https://twitter.com/DevTaty" target="_blank"><i class="w3-margin-right socialMedia fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/tatyannac/" target="_blank"><i class="w3-margin-right socialMedia fab fa-linkedin-in"></i></a>
-            <a href="mailto:tatyanna.cobb@gmail.com" target="_blank"><i class="w3-margin-right socialMedia fas fa-envelope"></i></a>
-            <a href="https://paypal.me/DevTatyanna"><i class="socialMedia fas fa-dollar-sign"></i></a>
-          </p>
-          <p class="w3-small w3-wide">Copyright &copy;2018 Tatyanna Cobb. All rights reserved. </p>
-        </footer>
       </main>
     );
   }
