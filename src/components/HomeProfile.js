@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class HomeProfile extends Component {
   render() {
     return (
-      <>
+      <main>
         <header id="home-page-pattern-header">
-          <button><i class="fas fa-tasks"></i> Create a New Pattern</button>
+          <button><a><i class="fas fa-tasks"></i> Create a New Pattern</a></button>
           <p>...or pick off where you left off:</p>
         </header>
         <article id="home-page-patterns">
@@ -31,7 +31,7 @@ class HomeProfile extends Component {
           </ul>
         </article>
 
-      </>
+      </main>
     );
   }
 }
