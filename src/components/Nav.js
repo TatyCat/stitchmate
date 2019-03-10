@@ -12,9 +12,6 @@ class Nav extends Component {
           <li><a href="#">FAQs</a></li>
           <li><a href="#">Share buttons</a></li>
         </ul>
-
-
-
       </nav>
     )
   }
