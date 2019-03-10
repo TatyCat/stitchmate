@@ -178,13 +178,34 @@ footer p a i {
     margin-left: auto;
   }
   nav ul li {
-    display: inline-block;
+    display: block;
     padding: .5rem;
+    border: white 1.5px solid;
+    margin: .5rem;
   }
   nav ul li a {
-    color: hotpink !important;
     width: 100%;
-    display: inline-block;
     text-align: right;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  #home-page-pattern-header {
+    margin: 0;
+    padding-top: 5vw;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(241, 240, 240);
+    padding-bottom: 5%;
+  }
+  #home-page-pattern-header button {
+    width: 80%;
+    letter-spacing: .4ch;
+    white-space: normal;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-size: calc(1.7vh + .5vw);
+    border: #ffc 2.5px solid;
   }
 }
