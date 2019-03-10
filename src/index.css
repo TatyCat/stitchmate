@@ -127,6 +127,7 @@ nav ul li a:link, nav ul li a:visited {
   position: relative;
   z-index: 5;
   cursor: pointer;
+  background-color: #f7e7f4b4;
 }
 
 /* --------- Footer */
@@ -135,13 +136,15 @@ footer {
   background-color: #F1F1F1;
   color: black;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 15vh;
   letter-spacing: 4px;
   display: flex;
   flex-flow: column;
+  align-content: flex-start;
   font-size: calc(.8vh + .5vw);
   padding: 3vh;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 footer p a i {
