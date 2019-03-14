@@ -192,11 +192,16 @@ footer p a i {
   /* overflow: hidden; */
 }
 
-/* 
-.socialMedia{
-    padding-right: 5px;
-    font-size: 2em;
+#m-color-change {
+  color: #ffff08;
 }
+
+#social-media-links a {
+  margin-right: 1.2vh;
+  font-size: calc(2vh + .4vw);
+}
+
+/* 
 
 .stitchBorder {
     width: 12pc;
