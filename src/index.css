@@ -198,7 +198,7 @@ textarea {
   color: rgb(42, 43, 42);
 }
 
-.landing-nav ul li a i:hover, .landing-nav ul li a:hover {
+.landing-nav ul li a:hover {
   color: black;
   border-bottom: dashed black 1px;
 }
