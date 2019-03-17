@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class LogIn extends Component {
   render() {
     return (
-      <>
+      <main>
         <div className="log-in">
-          <h1> <i class="far fa-sticky-note"></i>StitchMate </h1>
+          <h1>
+            <span id="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
+          </h1>
           <p><button>Log In</button> <button>Register</button></p>
           <form>
             <button>Log In With Google</button>
@@ -13,11 +15,14 @@ class LogIn extends Component {
             <p>or</p>
             <input placeholder="Enter your email"></input>
             <input placeholder="Enter your password"></input>
+            <br></br>
             <a>Don't remember your password?</a>
-            <button>LOG IN > </button>
+            <br></br>
+            <button>LOG IN</button>
           </form>
+
         </div>
-      </>
+      </main>
     );
   }
 }
