@@ -273,7 +273,8 @@ textarea {
 
 .landing-pg header button {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
 }
@@ -281,6 +282,11 @@ textarea {
 .landing-pg section {
   background-color: whitesmoke;
   text-align: center;
+  padding: 0;
+}
+
+.landing-pg section ul {
+  padding-left: 0px !important;
 }
 
 .landing-pg article h3 {
@@ -441,7 +447,7 @@ footer {
 footer p a i {
   color: black;
   padding: 0 .4rem;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 /* 
@@ -469,6 +475,7 @@ footer p a i {
     margin: 0 .5rem;
     margin-top: .5rem;
     padding: .7rem !important;
+    text-align: center;
   }
   nav ul li {
     display: block;
@@ -476,13 +483,15 @@ footer p a i {
     border: white 1.5px solid;
     width: 100%;
     margin: .5rem;
-    text-align: center;
   }
   nav ul li a {
     width: 100%;
     text-align: center;
     text-decoration: none;
     padding: 1rem;
+  }
+  #social-media-links a {
+    font-size: 5vw !important;
   }
   nav ul li a:hover {
     border-bottom: white 1px solid !important;
@@ -508,5 +517,11 @@ footer p a i {
   }
   nav ul li a:hover {
     border-bottom: none;
+  }
+  footer {
+    font-size: calc(1.5vh + .5vw);
+  }
+  footer p a i {
+    font-size: calc(2vh + .5vw);
   }
 }
