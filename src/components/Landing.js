@@ -29,11 +29,9 @@ class Landing extends Component {
         </nav>
         <main className="main-container landing-pg">
           <header>
-            <h2><span>Knit? Crochet?  </span>
-              Need to keep count of your sitches?</h2>
-            <h1>Keep track by stitching with us
+            <h1>Knit Easy With StitchMate...</h1>
 
-            </h1>
+            <h2>A Row Counter App optimized for knitting and crocheting</h2>
             <button><span>Register / Log In</span></button>
           </header>
           <article>
@@ -42,11 +40,11 @@ class Landing extends Component {
               <ul>
                 <li>
                   <h2><i className="fas fa-palette"></i></h2>
-                  <p>Add Custom Knit and Crochet Patterns</p>
+                  <p>Add custom knit and crochet patterns</p>
                 </li>
                 <li>
                   <h2><i className="fas fa-magic"></i></h2>
-                  <p>As Easy as 1...2...3 <br /> keep  track of where you left off</p>
+                  <p>As easy as 1...2...3 <br /> Keep track of where you left off</p>
                 </li>
                 <li>
                   <h2><i className="fas fa-map-pin"></i></h2>

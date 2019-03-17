@@ -6,7 +6,7 @@ class Nav extends Component {
       <nav>
         <h1>
           <a href="./Landing.js">
-            <span id="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
+            <span className="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
           </a>
         </h1>
         <ul>

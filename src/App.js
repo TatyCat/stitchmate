@@ -4,6 +4,7 @@ import Landing from './components/Landing'
 import LogIn from './components/LogIn'
 import HomeProfile from './components/HomeProfile'
 import Footer from './components/Footer'
+import PatternPg from './components/PatternPg';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Landing />
         {/* <LogIn /> */}
         {/* <HomeProfile /> */}
+        {/* <PatternPg /> */}
         <Footer />
       </>
     )

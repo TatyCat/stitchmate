@@ -180,7 +180,8 @@ textarea {
 /* LANDING PAGE */
 
 .landing-nav {
-  background-color: rgb(243, 241, 241) !important;
+  background: none;
+  background-color: rgba(243, 241, 241, 0.34) !important;
   color: black;
 }
 
@@ -236,7 +237,7 @@ textarea {
 }
 
 .landing-pg header:before {
-  background-image: url("images/the-interior-of-the-boards-wall-empty-texture-room.jpg");
+  background-image: url("images/crocheting-1479217__480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   content: ' ';
@@ -264,6 +265,7 @@ textarea {
 .landing-pg header h1 {
   font-size: 3rem;
   padding-bottom: 2rem;
+  color: black;
 }
 
 .landing-pg header h1, .landing-pg header h2, .landing-pg header button {
