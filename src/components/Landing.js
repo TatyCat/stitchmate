@@ -40,11 +40,11 @@ class Landing extends Component {
               <ul>
                 <li>
                   <h2><i class="fas fa-palette"></i></h2>
-                  <p>Add Custom Patterns</p>
+                  <p>Add Custom Knit and Crochet Patterns</p>
                 </li>
                 <li>
                   <h2><i class="fas fa-magic"></i></h2>
-                  <p>As Easy as 1...2...3 <i class="far fa-sticky-note"></i>StitchMate keeps track of where you left off</p>
+                  <p>As Easy as 1...2...3 <br /> keep  track of where you left off</p>
                 </li>
                 <li>
                   <h2><i class="fas fa-map-pin"></i></h2>
