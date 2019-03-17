@@ -79,7 +79,7 @@ nav ul li a:hover {
   border-bottom: #F1F1F1 2px solid;
 }
 
-#m-color-change {
+.m-color-change {
   color: #ffff08;
 }
 
@@ -195,10 +195,15 @@ textarea {
 }
 
 .landing-nav ul li a:link, .landing-nav ul li a:visited {
-  color: rgb(42, 43, 42) !important;
+  color: rgb(42, 43, 42);
 }
 
-.landing-nav h1 {
+.landing-nav ul li a i:hover, .landing-nav ul li a:hover {
+  color: black;
+  border-bottom: dashed black 1px;
+}
+
+.landing-nav>h1 {
   width: 100%;
   background-color: black;
   padding: 1rem 5rem;
@@ -209,15 +214,63 @@ textarea {
 
 .landing-pg {
   color: rgb(44, 44, 44);
-  text-shadow: slategrey 1px 1px;
+  text-shadow: rgb(48, 54, 48) 1px 1px;
   height: 100%;
+  color: black;
 }
 
 .landing-pg header {
-  background-color: whitesmoke;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: .1ch;
+  background-color: white;
+  text-align: left;
+  padding-left: 5rem;
+  color: white !important;
   padding: 3rem;
   border-radius: 1px;
-  height: 40vw;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-pg header:before {
+  background-image: url("images/48f24cf5-ad08-4599-a978-6c0c1127c536.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-position: 50% 0;
+  z-index: 1;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.75;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.landing-pg header h2 {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.landing-pg header h1 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.landing-pg header h1, .landing-pg header h2, .landing-pg header button {
+  z-index: 2;
+  position: relative;
 }
 
 .landing-pg header button {
@@ -234,13 +287,25 @@ textarea {
 
 .landing-pg article h3 {
   text-align: center;
-  letter-spacing: .3ch;
+  letter-spacing: .15ch;
   font-size: 1.8rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: rgba(125, 134, 106, 0.44);
-  color: white;
+  color: whitesmoke;
   margin-bottom: 0;
   margin-top: 0;
+  text-shadow: none;
+}
+
+.stitchmate-post-it {
+  color: yellow;
+  letter-spacing: normal;
+}
+
+.stitchmate-logo-lettering {
+  color: black;
+  letter-spacing: normal;
+  text-shadow: #000 1px .5px;
 }
 
 .landing-pg button {
@@ -251,19 +316,23 @@ textarea {
   box-shadow: rgba(112, 128, 144, 0.54) 1px 2px 9px;
   color: white;
   border: 4px solid #ffff08;
-  margin-bottom: 3vh;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .landing-pg button:hover span {
   border-bottom: #d6d607ab 2px dashed;
 }
 
+.landing-pg article section {
+  min-height: 40rem;
+}
+
 .landing-pg article section ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 0;
-  background-color: whitesmoke;
+  color: black !important;
 }
 
 /* corners */
@@ -276,7 +345,7 @@ textarea {
   min-height: 30vh;
   margin: 2em 2em;
   background: #97C02F;
-  color: #fff;
+  color: black;
   overflow: hidden;
 }
 
@@ -298,7 +367,7 @@ textarea {
 
 .landing-pg article section ul li::after {
   border-width: 8px;
-  border-color: transparent #fff #fff transparent !important;
+  border-color: transparent #f5f5f5 #f5f5f5 transparent !important;
   background: #658E15;
   display: block;
   width: 0;
@@ -315,7 +384,7 @@ textarea {
   background-repeat: repeat;
   background-size: auto;
   box-sizing: border-box;
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -356,7 +425,7 @@ textarea {
 /* --------- Footer */
 
 footer {
-  background-color: #F1F1F1;
+  background-color: rgb(235, 235, 235);
   color: black;
   text-align: center;
   letter-spacing: 4px;
