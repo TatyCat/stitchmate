@@ -133,6 +133,12 @@ nav ul li a:hover {
   font-weight: normal;
 }
 
+#home-page-patterns h2 span {
+  color: grey;
+  display: block;
+  margin-top: 50%;
+}
+
 #home-page-patterns ul {
   padding: 2em;
   display: flex;
@@ -168,7 +174,7 @@ nav ul li a:hover {
   position: relative;
   z-index: 5;
   cursor: pointer;
-  background-color: #f7e7f4b4;
+  background-color: #f2f7e7b4;
 }
 
 /* Add New Pattern */
@@ -537,6 +543,10 @@ footer p a i {
   border: 1px rgb(44, 44, 44) solid;
   background: white;
   border-radius: 4px;
+}
+
+.pattern-nav-button:hover {
+  opacity: .6;
 }
 
 .rowCounter button {

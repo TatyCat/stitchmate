@@ -13,8 +13,8 @@ class App extends Component {
         <Nav />
         {/* <Landing /> */}
         {/* <LogIn /> */}
-        {/* <HomeProfile /> */}
-        <PatternPg />
+        <HomeProfile />
+        {/* <PatternPg /> */}
         <Footer />
       </>
     )
