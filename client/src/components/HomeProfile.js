@@ -23,25 +23,26 @@ class HomeProfile extends Component {
 
   render() {
     return (
-      <main>
-        <header id="home-page-pattern-header">
-          <button><a><i className="fas fa-tasks"></i> Create a New Pattern</a></button>
-          <p>...or pick off where you left off:</p>
-        </header>
-        <article id="home-page-patterns">
-          <ul>
-            {this.state.patterns.map(pattern =>
-              <li key={pattern.id}>
-                <a href="#">
-                  <h2>{pattern.pattern_name} <span> Initiated on {moment(pattern.created_at).format("MMM Do YYYY")}</span>
-                  </h2>
-                </a>
-              </li>
-            )}
-          </ul>
-        </article>
-
-      </main>
+      <>
+        <main>
+          <header id="home-page-pattern-header">
+            <button><a><i className="fas fa-tasks"></i> Create a New Pattern</a></button>
+            <p>...or pick off where you left off:</p>
+          </header>
+          <article id="home-page-patterns">
+            <ul>
+              {this.state.patterns.map(pattern =>
+                <li key={pattern.id}>
+                  <a href="#">
+                    <h2>{pattern.pattern_name} <span> Initiated on {moment(pattern.created_at).format("MMM Do YYYY")}</span>
+                    </h2>
+                  </a>
+                </li>
+              )}
+            </ul>
+          </article>
+        </main>
+      </>
     );
   }
 }

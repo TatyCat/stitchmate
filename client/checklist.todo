@@ -32,6 +32,10 @@
 FLOW For Each Component: 
   HTML/CSS => ERD => React-ify your HTML => Convert static HTML to generating via data in state => Generate Scaffolds => Use fetch/axios to populate state
 
+  Then--
+    **list - show - delete - create - update**
+
+
 -1-
 change hard coded data in react app to be data pulled from state.
 -2-
@@ -70,6 +74,18 @@ added moment.js yarn add moment pckg in the CLIENT folder for date formatting.
   
   per the moment documentation - https://momentjs.com/
 -8-
+it was discussed that now that the API and component memos have been completed, i should follow the flow of -> 
+    **list - show - delete - create - update**
+  Now that i've created the list of projects, I need to work on 'show'-ing each pattern detail pg. 
+-9-
+add react router 
+  'yarn add react-router-dom' in the CLIENT folder
+  in the main app.js file add: import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
+
+  in the class add <Router></Router> code
+-10-
+
+
 
 
 

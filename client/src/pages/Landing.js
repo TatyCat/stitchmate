@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
+
 
 class Landing extends Component {
   render() {
@@ -6,9 +9,9 @@ class Landing extends Component {
       <>
         <nav className="landing-nav">
           <h1>
-            <a href="./Landing.js">
+            <Link to="/">
               <span className="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
-          </a>
+          </Link>
           </h1>
           <ul>
             <li><a href="./Login.js">Register/Log In</a></li>
@@ -59,6 +62,7 @@ class Landing extends Component {
           </article>
 
         </main>
+        < Footer />
       </>
     );
   }
