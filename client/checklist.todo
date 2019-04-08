@@ -1,0 +1,53 @@
+1. Arrrive on landing
+  OPTIONS:
+    register or log in 
+    share website on:
+      -pinterest 
+      -twitter 
+      -facebook
+
+2. Register or Log In
+
+3. User Home 
+  OPTIONS:
+    create a new pattern 
+    click an already existing pattern memo/link
+
+4. Clicked Pattern Page
+  OPTIONS:
+    nav button for _ create a new pattern
+    nav button for _ edit the pattenr on the page
+    nav button for _ projects in progress 
+
+    pattern link for _ current pattern original link
+    
+    step button for _ open counter 
+    step button for _ close counter 
+
+    text area to add notes
+
+    button for _ delete pattern
+
+
+FLOW For Each Component: 
+  HTML/CSS => ERD => React-ify your HTML => Convert static HTML to generating via data in state => Generate Scaffolds => Use fetch/axios to populate state
+
+-1-
+change hard coded data in react app to be data pulled from state.
+-2-
+created a rails new api w/ a database
+  rails new appName --skip-spring --database postgresql --api
+  cd into folder & run 'bundle install'
+  run 'rails db:create'
+-3-
+scaffold a model/view/controller for one the tables 
+  rails generate scaffold pattern pattern_name:string created_at:datetime
+confirm accuracy 
+run 'rails db:migrate'
+run 'rails server'
+-4-
+
+
+    
+
+
