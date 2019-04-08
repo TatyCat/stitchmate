@@ -1,28 +1,18 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Nav extends Component {
   render() {
     return (
       <nav>
         <h1>
-          <a href="./Landing.js">
-            <span className="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
-          </a>
+          <Link to="/home">
+            <span className="m-color-change"><i className="far fa-sticky-note"></i></span>
+            StitchMate
+          </Link>
         </h1>
         <ul>
-          <li><a href="./Login.js">Register/Log In</a></li>
-          <li id="social-media-links">
-            <a href="https://pinterest.com/" target="_blank">
-              <i className="fab fa-pinterest-square"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i className="w3-margin-right fab fa-twitter"></i>
-            </a>
-            <a href="https://facebook.com/" target="_blank">
-              <i className="w3-margin-right fab fa-facebook"></i>
-            </a>
-          </li>
-
+          <li><a href="/">Log Out</a></li>
         </ul>
       </nav>
     )

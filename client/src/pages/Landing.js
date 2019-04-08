@@ -10,8 +10,9 @@ class Landing extends Component {
         <nav className="landing-nav">
           <h1>
             <Link to="/">
-              <span className="m-color-change"><i className="far fa-sticky-note"></i></span>StitchMate
-          </Link>
+              <span className="m-color-change"><i className="far fa-sticky-note"></i></span>
+              StitchMate
+            </Link>
           </h1>
           <ul>
             <li><a href="./Login.js">Register/Log In</a></li>

@@ -83,7 +83,11 @@ add react router
   in the main app.js file add: import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
 
   in the class add <Router></Router> code
+  *moved the HomeProfile page to the pages folder - refactoring 
 -10-
+In the process of switching the pages over to be included with router, next step in the flow is to show each pattern & Linking that up !#GAVIN IS GONE#!
+
+On the pattern page - converting the hard coded to state.
 
 
 

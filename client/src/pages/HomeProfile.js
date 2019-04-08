@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment'
 import Nav from '../components/Nav'
+import { Link } from 'react-router-dom'
+
 
 
 class HomeProfile extends Component {
@@ -29,7 +31,7 @@ class HomeProfile extends Component {
         <main>
           < Nav />
           <header id="home-page-pattern-header">
-            <button><a><i className="fas fa-tasks"></i> Create a New Pattern</a></button>
+            <button><Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern</Link></button>
             <p>...or pick off where you left off:</p>
           </header>
           <article id="home-page-patterns">
