@@ -13,13 +13,13 @@ class Nav extends Component {
           <li><a href="./Login.js">Register/Log In</a></li>
           <li id="social-media-links">
             <a href="https://pinterest.com/" target="_blank">
-              <i class="fab fa-pinterest-square"></i>
+              <i className="fab fa-pinterest-square"></i>
             </a>
             <a href="https://twitter.com/" target="_blank">
-              <i class="w3-margin-right fab fa-twitter"></i>
+              <i className="w3-margin-right fab fa-twitter"></i>
             </a>
             <a href="https://facebook.com/" target="_blank">
-              <i class="w3-margin-right fab fa-facebook"></i>
+              <i className="w3-margin-right fab fa-facebook"></i>
             </a>
           </li>
 

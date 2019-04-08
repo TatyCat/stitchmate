@@ -41,13 +41,35 @@ created a rails new api w/ a database
   run 'rails db:create'
 -3-
 scaffold a model/view/controller for one the tables 
-  rails generate scaffold pattern pattern_name:string created_at:datetime
+  rails generate scaffold pattern pattern_name:string
 confirm accuracy 
 run 'rails db:migrate'
 run 'rails server'
 -4-
+add data through postman before switching out the hard coded state to a fetch/axios call....
+  POSTMAN--
+    {
+      "pattern": {
+        "pattern_name": "Bar Hat"
+      }
+    }
+-5-
+install axios with 'yarn add axios' in the CLIENT folder.
+clear out the old data in preparation for the api.
+  state = {
+    patterns: [
 
+    ]
+  }
+-6-
+i ran into a cors issue, so i did the steps to add rack-cors from the handbook of merge.
+-7-
+added moment.js yarn add moment pckg in the CLIENT folder for date formatting. 
+  import moment from 'moment'
+  <h2>{pattern.pattern_name} <span> Initiated on {moment(pattern.created_at).format("MMM Do YYYY")}</span>
+  
+  per the moment documentation - https://momentjs.com/
+-8-
 
-    
 
 
