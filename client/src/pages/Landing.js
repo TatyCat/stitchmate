@@ -58,10 +58,10 @@ class Landing extends Component {
                   <p>Organize and save time</p>
                 </li>
               </ul>
-              <div>
-                <button><span>Sign Up To Use StitchMate</span></button>
-              </div>
             </section>
+            <div>
+              <Link>Sign Up To Use StitchMate</Link>
+            </div>
           </article>
 
         </main>

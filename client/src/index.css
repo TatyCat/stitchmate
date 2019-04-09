@@ -434,16 +434,30 @@ textarea {
   text-align: center;
 }
 
+/* Optional flex below */
+
 .landing-pg section {
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 
-.landing-pg section div {
-  margin-top: 5rem;
-  background-color: rgba(14, 14, 14, 0.555);
-  align-self: flex-end;
+.landing-pg article div {
+  padding: 2rem;
+  text-align: center;
+}
+
+.landing-pg article div a:link, .landing-pg article div a:visited {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: #F1F1F1 .5px .5px;
+  letter-spacing: 1px;
+  font-size: 3vh;
+}
+
+.landing-pg article div:hover {
+  background-color: black;
+  color: white;
 }
 
 /* --------- Footer */
