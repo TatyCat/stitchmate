@@ -9,15 +9,15 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Nav /> */}
         {/* <LogIn /> */}
 
         <Router>
           <Switch>
             <Route exact path="/" component={Landing}></Route>
+            {/* <Route path="" component={}></Route> */}
+
             <Route path="/home" component={HomeProfile}></Route>
             <Route path="/pattern" component={PatternPg}></Route>
-            {/* <Route path="" component={}></Route> */}
           </Switch>
         </Router>
       </>

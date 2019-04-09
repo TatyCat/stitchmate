@@ -14,26 +14,11 @@ class Landing extends Component {
               StitchMate
             </Link>
           </h1>
-          <ul>
-            <li><a href="./Login.js">Register/Log In</a></li>
-            <li id="social-media-links">
-              <a href="https://pinterest.com/" target="_blank">
-                <i className="fab fa-pinterest-square"></i>
-              </a>
-              <a href="https://twitter.com/" target="_blank">
-                <i className="w3-margin-right fab fa-twitter"></i>
-              </a>
-              <a href="https://facebook.com/" target="_blank">
-                <i className="w3-margin-right fab fa-facebook"></i>
-              </a>
-            </li>
-
-          </ul>
+          <div><Link href="./Login.js">Register / Log In</Link></div>
         </nav>
         <main className="main-container landing-pg">
           <header>
             <h1>Knit Easy With StitchMate...</h1>
-
             <h2>A Row Counter App optimized for knitting and crocheting</h2>
             <button><span>Register / Log In</span></button>
           </header>

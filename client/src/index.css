@@ -191,32 +191,35 @@ textarea {
 /* LANDING PAGE */
 
 .landing-nav {
-  background: none;
-  background-color: rgba(243, 241, 241, 0.34) !important;
-  color: black;
+  /* background: none; */
+  display: flex;
+  background-color: black;
+  color: whitesmoke;
+  align-items: baseline;
+  /* background-color: red !important; */
 }
 
-.landing-nav ul {
-  font-size: 2.5vh;
-  margin: 0;
+.landing-nav div {
+  font-size: 2.7vh;
+  padding: 1rem 5rem;
+  align-items: baseline;
+  vertical-align: middle;
 }
 
-.landing-nav ul li a:link, .landing-nav ul li a:visited {
-  color: rgb(42, 43, 42);
+.landing-nav div a:link, .landing-nav div a:visited {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-.landing-nav ul li a:hover {
-  color: black;
-  border-bottom: dashed black 1px;
+.landing-nav div a:hover {
+  color: white;
+  opacity: .8;
 }
 
 .landing-nav>h1 {
-  width: 100%;
   background-color: black;
   padding: 1rem 5rem;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .landing-pg {
@@ -269,6 +272,7 @@ textarea {
 
 .landing-pg header h1 {
   font-size: 3rem;
+  /* this section has a slight... problem; */
   padding-bottom: 2rem;
   color: black;
 }
@@ -485,6 +489,12 @@ footer p a i {
 }
 
 @media (max-width: 650px) {
+  .landing-nav {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+  }
   nav {
     justify-content: space-evenly;
   }

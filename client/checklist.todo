@@ -85,11 +85,23 @@ add react router
   in the class add <Router></Router> code
   *moved the HomeProfile page to the pages folder - refactoring 
 -10-
-In the process of switching the pages over to be included with router, next step in the flow is to show each pattern & Linking that up !#GAVIN IS GONE#!
+In the process of switching the pages over to be included with router, next step in the flow is to show each pattern & Linking that up.
 
-On the pattern page - converting the hard coded to state.
+On the pattern page - Go back to step 1. and change hard coded data in react app to be data pulled from state. Looked at ERD for structure of the state/db. found out it was wrong, gavin redid it and i filled out the rest looking at the html from what was on the page.
+
+....I now see why they say you're supposed to spend more time planning than coding. i def could have planned this out better and completed more css/behavior before adding the dynamic data....
 
 
 
 
 
+
+
+
+
+TODO:
+Log In - Auth0 / log out
+show pattern
+create new pattern / delete
+
+deploy the app
