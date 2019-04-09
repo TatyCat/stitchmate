@@ -58,7 +58,9 @@ class Landing extends Component {
                   <p>Organize and save time</p>
                 </li>
               </ul>
-              <button><span>Register / Log In</span></button>
+              <div>
+                <button><span>Sign Up To Use StitchMate</span></button>
+              </div>
             </section>
           </article>
 

@@ -198,13 +198,7 @@ textarea {
 
 .landing-nav ul {
   font-size: 2.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   margin: 0;
-  padding: .8rem;
-  padding-left: 4.5rem;
 }
 
 .landing-nav ul li a:link, .landing-nav ul li a:visited {
@@ -304,7 +298,8 @@ textarea {
 .landing-pg article h3 {
   text-align: center;
   letter-spacing: .15ch;
-  font-size: 1.8rem;
+  font-size: calc(3.5vh + .4vw);
+  white-space: nowrap;
   padding: 1.5rem;
   background-color: rgba(125, 134, 106, 0.44);
   color: whitesmoke;
@@ -348,7 +343,7 @@ textarea {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: black !important;
+  color: black;
 }
 
 /* corners */
@@ -360,9 +355,10 @@ textarea {
   height: auto;
   min-height: 30vh;
   margin: 2em 2em;
-  background: rgb(238, 238, 233);
+  border: rgb(237, 237, 227);
   color: black;
   overflow: hidden;
+  background-color: rgb(238, 238, 237);
 }
 
 .landing-pg article section ul li::after {
@@ -370,7 +366,6 @@ textarea {
   position: absolute;
   bottom: 0;
   right: 0;
-  /* border-width: 16px 16px 0 0; */
   border-width: 0 16px 16px 0;
   border-style: solid;
   border-color: rgb(180, 180, 134) #fff;
@@ -384,15 +379,15 @@ textarea {
 .landing-pg article section ul li::after {
   border-width: 8px;
   border-color: transparent #f5f5f5 #f5f5f5 transparent !important;
-  background: rgba(236, 236, 221, 0.906);
+  background-color: #e3e3db;
   display: block;
   width: 0;
 }
 
 .landing-pg article section ul li h2 {
   background-clip: border-box;
-  background-color: rgb(62, 63, 58);
-  background-image: none;
+  background-color: #ced4c0;
+  border-bottom: rgb(237, 237, 227) 1px solid;
   background-origin: padding-box;
   background-position: 0% 0%;
   background-position-x: 0%;
@@ -400,7 +395,7 @@ textarea {
   background-repeat: repeat;
   background-size: auto;
   box-sizing: border-box;
-  color: white;
+  color: whitesmoke;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -418,6 +413,7 @@ textarea {
   position: relative;
   text-align: center;
   visibility: visible;
+  text-shadow: rgb(170, 172, 167) 1px .5px;
 }
 
 .landing-pg article section ul li p {
@@ -434,8 +430,20 @@ textarea {
   padding-right: 20px;
   padding-top: 10px;
   visibility: visible;
-  text-shadow: none;
+  text-shadow: rgb(215, 215, 215) 1px .5px;
   text-align: center;
+}
+
+.landing-pg section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.landing-pg section div {
+  margin-top: 5rem;
+  background-color: rgba(14, 14, 14, 0.555);
+  align-self: flex-end;
 }
 
 /* --------- Footer */
@@ -450,7 +458,7 @@ footer {
   border-top: #868686 .5px solid;
   width: 100%;
   right: 0;
-  bottom: 0%;
+  bottom: 0;
   display: block;
   left: 0;
   z-index: 1;
@@ -645,7 +653,6 @@ input {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* 
 #stepNumberDropDown {
   width: 13%;
   max-width: 14%;
@@ -654,4 +661,4 @@ input {
 .stepNumberCSS {
   font-weight: 600;
   font-size: 125.5%;
-} */
+}
