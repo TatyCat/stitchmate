@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  step_number: 1
+  pattern_step: MyText
+  counter_open: false
+  row_count: 1
+  rep_count: 1
+  pattern: one
+
+two:
+  step_number: 1
+  pattern_step: MyText
+  counter_open: false
+  row_count: 1
+  rep_count: 1
+  pattern: two

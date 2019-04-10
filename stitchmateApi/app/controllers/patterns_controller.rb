@@ -2,38 +2,40 @@ class PatternsController < ApplicationController
   before_action :set_pattern, only: [:show, :update, :destroy]
 
   # GET /patterns
+  # GET /patterns.json
   def index
     @patterns = Pattern.all
-
-    render json: @patterns
   end
 
   # GET /patterns/1
+  # GET /patterns/1.json
   def show
-    render json: @pattern
   end
 
   # POST /patterns
+  # POST /patterns.json
   def create
     @pattern = Pattern.new(pattern_params)
 
     if @pattern.save
-      render json: @pattern, status: :created, location: @pattern
+      render :show, status: :created, location: @pattern
     else
       render json: @pattern.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /patterns/1
+  # PATCH/PUT /patterns/1.json
   def update
     if @pattern.update(pattern_params)
-      render json: @pattern
+      render :show, status: :ok, location: @pattern
     else
       render json: @pattern.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /patterns/1
+  # DELETE /patterns/1.json
   def destroy
     @pattern.destroy
   end
@@ -44,8 +46,8 @@ class PatternsController < ApplicationController
       @pattern = Pattern.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Never trust parameters from the scary internet, only allow the white list through.
     def pattern_params
-      params.require(:pattern).permit(:pattern_name, :created_at)
+      params.require(:pattern).permit(:pattern_name, :pattern_link, :pattern_notes)
     end
 end

@@ -2,8 +2,10 @@
 
 one:
   pattern_name: MyString
-  created_at: 2019-04-08 13:22:54
+  pattern_link: MyString
+  pattern_notes: MyString
 
 two:
   pattern_name: MyString
-  created_at: 2019-04-08 13:22:54
+  pattern_link: MyString
+  pattern_notes: MyString

@@ -38,10 +38,10 @@ class HomeProfile extends Component {
             <ul>
               {this.state.patterns.map(pattern =>
                 <li key={pattern.id}>
-                  <a href="#">
+                  <Link to={`/pattern/${pattern.id}`}>
                     <h2>{pattern.pattern_name} <span> Initiated on {moment(pattern.created_at).format("MMM Do YYYY")}</span>
                     </h2>
-                  </a>
+                  </Link>
                 </li>
               )}
             </ul>

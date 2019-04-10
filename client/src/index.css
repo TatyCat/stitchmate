@@ -599,26 +599,25 @@ footer p a i {
 }
 
 .rowCounter button {
+  border: rgb(158, 158, 158) 1px solid;
   background-color: white;
-  border: none;
   padding: 8px 16px;
   border-radius: 4px;
-  letter-spacing: 4px;
   margin: .4rem .6rem;
   font-family: "Raleway";
   font-size: 75%;
 }
 
-.rowCounter button:hover {
-  background-color: #8bc34a;
+.w3-border-light-green {
+  border: #8bc34a 1px solid !important;
 }
 
-.rowCounter button:nth-child(1) {
-  border: #8bc34a 1px solid;
+.w3-border-light-green:hover {
+  background-color: #8bc34a !important;
 }
 
-.rowCounter button:nth-child(2) {
-  border: #E15241 1px solid;
+.w3-danger:hover {
+  border: #E15241 1px solid !important;
 }
 
 .delete-pattern {
@@ -641,6 +640,7 @@ input {
   border-radius: 4px;
   letter-spacing: 4px;
   font-size: 75%;
+  margin: 3.5rem 0;
 }
 
 .w3-ripple:active {
@@ -651,10 +651,6 @@ input {
   transition: opacity 0s
 }
 
-.rowCounterCard button {
-  border: rgb(158, 158, 158) 1px solid !important;
-}
-
 .rowCounterCard {
   text-align: center;
   border: rgb(158, 158, 158) 1px solid !important;
@@ -662,27 +658,35 @@ input {
   margin: 1rem 4.5rem;
   padding-top: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  max-width: 50%;
 }
 
-.repCounterCard button {
-  border: rgb(158, 158, 158) 1px solid !important;
+.w3-wide {
+  letter-spacing: 4px;
 }
 
-.repCounterCard {
-  text-align: center;
-  border: rgb(158, 158, 158) 1px solid !important;
+.notes-section {
+  width: 80%;
+}
+
+textarea {
+  width: 90%;
+  height: 10vh;
+  padding: 7px;
+  border: 1.3px solid #cccccc;
   border-radius: 4px;
-  margin: 1rem 4.5rem;
-  padding-top: 1rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: transparent;
 }
 
-#stepNumberDropDown {
-  width: 13%;
-  max-width: 14%;
-}
-
-.stepNumberCSS {
-  font-weight: 600;
-  font-size: 125.5%;
+.textarea-submit-button {
+  display: block;
+  border: none;
+  border: rgb(158, 158, 158) 1px solid;
+  background-color: white;
+  padding: 8px 16px;
+  margin-top: .2rem;
+  border-radius: 4px;
+  font-family: "Raleway";
+  font-size: 75%;
+  max-width: 24.2vh;
 }

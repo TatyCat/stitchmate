@@ -17,7 +17,7 @@ class App extends Component {
             {/* <Route path="" component={}></Route> */}
 
             <Route path="/home" component={HomeProfile}></Route>
-            <Route path="/pattern" component={PatternPg}></Route>
+            <Route path="/pattern/:id" component={PatternPg}></Route>
           </Switch>
         </Router>
       </>

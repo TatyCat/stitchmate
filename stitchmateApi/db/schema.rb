@@ -10,15 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_08_172254) do
+ActiveRecord::Schema.define(version: 2019_04_10_183214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "patterns", force: :cascade do |t|
     t.string "pattern_name"
+    t.string "pattern_link"
+    t.string "pattern_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "steps", force: :cascade do |t|
+    t.integer "step_number"
+    t.text "pattern_step"
+    t.boolean "counter_open"
+    t.integer "row_count"
+    t.integer "rep_count"
+    t.bigint "pattern_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pattern_id"], name: "index_steps_on_pattern_id"
+  end
+
+  add_foreign_key "steps", "patterns"
 end

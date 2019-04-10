@@ -12,7 +12,7 @@ class PatternsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create pattern" do
     assert_difference('Pattern.count') do
-      post patterns_url, params: { pattern: { created_at: @pattern.created_at, pattern_name: @pattern.pattern_name } }, as: :json
+      post patterns_url, params: { pattern: { pattern_link: @pattern.pattern_link, pattern_name: @pattern.pattern_name, pattern_notes: @pattern.pattern_notes } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class PatternsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pattern" do
-    patch pattern_url(@pattern), params: { pattern: { created_at: @pattern.created_at, pattern_name: @pattern.pattern_name } }, as: :json
+    patch pattern_url(@pattern), params: { pattern: { pattern_link: @pattern.pattern_link, pattern_name: @pattern.pattern_name, pattern_notes: @pattern.pattern_notes } }, as: :json
     assert_response 200
   end
 
