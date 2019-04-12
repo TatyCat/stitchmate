@@ -15,8 +15,7 @@ class HomeProfile extends Component {
   }
 
   componentDidMount() {
-    const axios = require('axios')
-    axios.get('http://localhost:3000/patterns')
+    axios.get('http://localhost:3000/api/patterns')
       .then(response => {
         this.setState({ patterns: response.data })
       })
@@ -32,7 +31,7 @@ class HomeProfile extends Component {
           < Nav />
           <header id="home-page-pattern-header">
             <button><Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern</Link></button>
-            <p>...or pick off where you left off:</p>
+            <p>...or pick up where you left off:</p>
           </header>
           <article id="home-page-patterns">
             <ul>

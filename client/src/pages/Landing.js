@@ -14,13 +14,13 @@ class Landing extends Component {
               StitchMate
             </Link>
           </h1>
-          <div><Link href="./Login.js">Register / Log In</Link></div>
+          <div><Link to="/home">Register / Log In</Link></div>
         </nav>
         <main className="main-container landing-pg">
           <header>
             <h1>Knit Easy With StitchMate...</h1>
             <h2>A Row Counter App optimized for knitting and crocheting</h2>
-            <button><span>Register / Log In</span></button>
+            <button><Link to="/home"><span>Register / Log In</span></Link></button>
           </header>
           <article>
             <h3>The <span className="stitchmate-post-it"><i className="far fa-sticky-note"></i></span><span className="stitchmate-logo-lettering">StitchMate</span> Way</h3>
@@ -45,7 +45,7 @@ class Landing extends Component {
               </ul>
             </section>
             <div>
-              <Link>Sign Up To Use StitchMate</Link>
+              <Link to="/home">Sign Up To Use StitchMate</Link>
             </div>
           </article>
 
