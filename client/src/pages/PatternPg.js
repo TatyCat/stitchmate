@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav'
+// import New from '../pages/New'
+// import EditPattern from '../pages/EditPattern'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -26,7 +28,7 @@ class PatternPg extends Component {
   deletePattern() {
     axios.delete(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
       .then(() => {
-        this.props.history.push('/')
+        this.props.history.push('/home')
       })
   }
 
@@ -43,9 +45,8 @@ class PatternPg extends Component {
                 <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
                 </Link>
               </button>
-              <button className="w3-button w3-ripple pattern-nav-button"><Link to="#"><i className="far fa-edit"></i> Edit Pattern</Link></button>
+              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/api/patterns/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit Pattern</Link></button>
               <button className="w3-button w3-ripple pattern-nav-button"><Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link></button>
-
             </header>
 
             <h1 className="pattern-name stitchBorder">{this.state.pattern.pattern_name}</h1>

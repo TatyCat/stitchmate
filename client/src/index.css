@@ -183,21 +183,13 @@ nav ul li a:hover {
   background-color: #f2f7e7b4;
 }
 
-/* Add New Pattern */
-
-textarea {
-  resize: vertical;
-}
-
 /* LANDING PAGE */
 
 .landing-nav {
-  /* background: none; */
   display: flex;
   background-color: black;
   color: whitesmoke;
   align-items: baseline;
-  /* background-color: red !important; */
 }
 
 .landing-nav div {
@@ -519,6 +511,8 @@ footer p a i {
   nav ul li {
     padding: .5rem;
     border: white 1.5px solid;
+    margin-right: .5rem;
+    color: white !important;
   }
   nav ul li a {
     padding: .5rem;
@@ -697,4 +691,75 @@ textarea {
   font-family: "Raleway";
   font-size: 75%;
   max-width: 24.2vh;
+}
+
+/* Edit PG */
+
+.edit-pg form {
+  margin: 3vh 0;
+}
+
+.field-string {
+  margin: 2rem;
+}
+
+.edit-pg form input {
+  float: right;
+}
+
+.edit-pg fieldset {
+  border: grey solid .5px !important;
+  /* border-color: pink; */
+}
+
+.panel-title {
+  color: red;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: 3vh;
+}
+
+.list-group {
+  border: 1px solid #ddd;
+  width: 50%;
+  margin-left: 3vh;
+  text-align: center;
+  background-color: rgb(255, 255, 217);
+}
+
+.list-group-item {
+  padding: 8px;
+  display: block;
+  border-bottom: 1px solid rgb(236, 236, 236)
+}
+
+.bs-callout, .error-detail, .bs-callout-info {
+  display: none;
+}
+
+/* New Pattern */
+
+.new-pg, .edit-pg {
+  margin: 3vh;
+}
+
+.new-pg button, .edit-pg .btn {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin: .4rem .2vh;
+  font-family: "Raleway";
+  font-size: 75%;
+  border: #8bc34a 1px solid;
+  background-color: #8bc34a;
+}
+
+.new-pg button:hover, .edit-pg .btn:hover {
+  transition: ease-in;
+  border: #8bc34a 1px solid;
+  background-color: white;
+}
+
+textarea {
+  resize: vertical;
 }

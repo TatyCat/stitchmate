@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+
 class Nav extends Component {
+
   render() {
     return (
       <nav>
@@ -12,7 +14,9 @@ class Nav extends Component {
           </Link>
         </h1>
         <ul>
-          <li><a href="/">Log Out</a></li>
+          {/* <li><Link to={this.props.newMenuLink}>{this.props.newMenuLink}</Link></li> */}
+
+          <li><Link to="/">Log Out</Link></li>
         </ul>
       </nav>
     )
