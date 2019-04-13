@@ -627,8 +627,8 @@ footer p a i {
 }
 
 input {
-  padding: .3rem .7rem;
-  width: 30%;
+  padding: 1vh;
+  width: 55vw;
   resize: horizontal;
   overflow: auto;
 }
@@ -695,7 +695,7 @@ textarea {
 
 /* Edit PG */
 
-.edit-pg form {
+form {
   margin: 3vh 0;
 }
 
@@ -703,13 +703,16 @@ textarea {
   margin: 2rem;
 }
 
-.edit-pg form input {
+form input {
   float: right;
 }
 
-.edit-pg fieldset {
+fieldset {
   border: grey solid .5px !important;
-  /* border-color: pink; */
+}
+
+legend {
+  border-bottom: grey 1px dashed;
 }
 
 .panel-title {
