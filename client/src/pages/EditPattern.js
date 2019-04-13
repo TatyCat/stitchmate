@@ -34,6 +34,11 @@ class EditPattern extends Component {
       })
   }
 
+  submitSteps = form => {
+    axios.post(`http://localhost:3000/api/steps`)
+
+  }
+
 
   render() {
     const schema = {
@@ -65,22 +70,27 @@ class EditPattern extends Component {
           <header>
             <button className="w3-button w3-ripple pattern-nav-button">
               <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
-                </Link>
+              </Link>
             </button>
-            <button className="w3-button w3-ripple pattern-nav-button"><Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link></button>
+            <button className="w3-button w3-ripple pattern-nav-button">
+              <Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link>
+            </button>
 
           </header>
 
           <Form schema={schema}
             onSubmit={this.submit} />
 
-          <Form schema={stepsSchema} onSubmit={this.submitSteps} />
+          {/* // Another form to *ADD* a step */}
+
+          <Form schema={stepsSchema}
+            onSubmit={this.submitSteps} />
+
         </main>
       </ >
 
       // Put a list of steps, and a button for each to delete that step
 
-      // Another form to *ADD* a step
     );
   }
 }

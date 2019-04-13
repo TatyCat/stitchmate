@@ -52,7 +52,7 @@ class PatternPg extends Component {
             <h1 className="pattern-name stitchBorder">{this.state.pattern.pattern_name}</h1>
 
             <h3>Link to Pattern:
-              <a href={this.state.pattern.pattern_link}> {this.state.pattern.pattern_link}</a>
+              <a href={this.state.pattern.pattern_link} target="_blank"> {this.state.pattern.pattern_link}</a>
             </h3>
 
             <br />
