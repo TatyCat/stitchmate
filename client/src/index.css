@@ -747,7 +747,7 @@ legend {
 }
 
 .new-pg button, .edit-pg .btn {
-  background-color: white;
+  color: white;
   padding: 8px 16px;
   border-radius: 2px;
   margin: .4rem .2vh;
@@ -761,6 +761,7 @@ legend {
   transition: ease-in;
   border: #8bc34a 1px solid;
   background-color: white;
+  color: black;
 }
 
 textarea {
