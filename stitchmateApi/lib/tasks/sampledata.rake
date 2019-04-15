@@ -13,7 +13,7 @@ namespace :sampledata do
 
     Another note… Since this scarf is in stockinette stitch, it will inevitably curl into a tube. It’s quite a wide scarf, so it won’t be a tight tube, but you can definitely expect some curling. We think that’s part of the beauty!
     ")
-
+# COMMAND - rails sampledata:load
     # t.integer "step_number"
     # t.text "pattern_step"
     # t.boolean "counter_open"

@@ -37,7 +37,7 @@ class PatternPg extends Component {
                 </Link>
               </button>
 
-              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/pattern/edit/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit Pattern</Link></button>
+              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/pattern/edit/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit / Add to Pattern</Link></button>
 
               <button className="w3-button w3-ripple pattern-nav-button"><Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link></button>
             </header>
@@ -45,7 +45,7 @@ class PatternPg extends Component {
             <h1 className="pattern-name stitchBorder">{this.state.pattern.pattern_name}</h1>
 
             <h3>Link to Pattern:
-              <a href={this.state.pattern.pattern_link} target="_blank" rel="noopener noreferrer">{this.state.pattern.pattern_link}</a>
+               <a href={this.state.pattern.pattern_link} target="_blank" rel="noopener noreferrer"> {this.state.pattern.pattern_link}</a>
             </h3>
 
             <br />
@@ -82,15 +82,11 @@ class PatternPg extends Component {
             }
 
 
-            <article className="notes-section">
+            <section className="notes-section">
               <h2>Notes</h2>
               {this.state.pattern.pattern_notes}
-              <textarea placeholder="Enter your notes here..."
-                onChange={this.handleChange}
-                defaultValue={this.state.value}
-              />
 
-            </article>
+            </section>
           </main >
 
         </div >

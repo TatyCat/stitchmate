@@ -663,6 +663,7 @@ input {
 
 .notes-section {
   width: 80%;
+  margin: 3rem 0;
 }
 
 textarea {
@@ -694,7 +695,7 @@ form {
   margin: 3vh 0;
 }
 
-.field-string {
+.field-string, .field-number {
   margin: 2rem;
 }
 
