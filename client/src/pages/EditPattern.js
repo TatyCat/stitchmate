@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav'
-// import New from '../pages/New'
-import { Link } from 'react-router-dom'
 import Form from 'react-jsonschema-form'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
-
-
 
 class EditPattern extends Component {
   state = {
@@ -15,7 +12,7 @@ class EditPattern extends Component {
     }
   }
 
-  componentDidMount() {
+  loadPattern = () => {
     axios.get(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
       .then(response => {
         this.setState({ pattern: response.data })
@@ -23,25 +20,48 @@ class EditPattern extends Component {
       .catch(error => {
         console.log(error)
       })
+
+  }
+  componentDidMount() {
+    this.loadPattern()
   }
 
 
-  submit = form => {
-    axios.put(`http://localhost:3000/api/patterns/${this.props.match.params.id}`, { pattern: form.formData })
+  submitPattern = form => {
+    axios.put(`http://localhost:3000/api/patterns/${this.state.pattern.id}`, { pattern: form.formData })
       .then(response => {
-        const newPattern = response.data
-        this.props.history.push(`/pattern/${newPattern.id}`)
+        this.props.history.push(`/pattern/${this.state.pattern.id}`)
       })
   }
 
-  submitSteps = form => {
-    axios.post(`http://localhost:3000/api/steps`)
+  createStep = form => {
+    axios.post(`http://localhost:3000/api/steps`, {
+      step: Object.assign(form.formData, { pattern_id: this.state.pattern.id })
+    }).then(reponse => {
+      this.loadPattern()
+    })
+  }
+
+  editStep = (form, step_id) => {
+    axios.put(`http://localhost:3000/api/steps/${step_id}`, {
+      step: form.formData
+    }).then(reponse => {
+      this.loadPattern()
+    })
+  }
+
+  deleteStep = (id) => {
+    console.log(id)
+
+    axios.delete(`http://localhost:3000/api/steps/${id}`)
+      .then(() => {
+        this.loadPattern()
+      })
 
   }
 
-
   render() {
-    const schema = {
+    const patternSchema = {
       title: 'Edit Pattern',
       type: "object",
       required: ["pattern_name"],
@@ -52,19 +72,20 @@ class EditPattern extends Component {
       }
     }
 
-    const stepsSchema = {
-      title: 'Add a Step',
+    const addStepSchema = {
+      title: "Add Step",
       type: "object",
-      required: ["step_number"],
       properties: {
-        step_number: { type: "string", title: "Step Number", default: this.state.pattern.steps.step_number },
-        pattern_step: { type: "string", title: "Pattern Instruction For The Step", default: this.state.pattern.steps.pattern_step }
+        step_number: { type: "number", title: "Step Number" },
+        pattern_step: { type: "string", title: "Pattern Step" },
+        row_count: { type: "number", title: "Row Count", default: 0 },
+        rep_count: { type: "number", title: "Rep Count", default: 0 }
       }
     }
 
     return (
       <  >
-        < Nav />
+        <Nav />
         <main className="edit-pg">
 
           <header>
@@ -75,22 +96,43 @@ class EditPattern extends Component {
             <button className="w3-button w3-ripple pattern-nav-button">
               <Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link>
             </button>
-
           </header>
+          <article>
+            <h1>Edit</h1>
+            <section>
+              <Form schema={patternSchema}
+                onSubmit={this.submitPattern} />
+            </section>
 
-          <Form schema={schema}
-            onSubmit={this.submit} />
+            {/* List of steps, each with a delete button -map*/}
 
-          {/* // Another form to *ADD* a step */}
+            {this.state.pattern.steps.map(step => {
+              const editStepSchema = {
+                title: "Edit Step",
+                type: "object",
+                properties: {
 
-          <Form schema={stepsSchema}
-            onSubmit={this.submitSteps} />
+                  step_number: { type: "number", title: "Step Number", default: step.step_number },
+                  pattern_step: { type: "string", title: "Pattern Step", default: step.pattern_step },
+                  row_count: { type: "number", title: "Row Count", default: step.row_count },
+                  rep_count: { type: "number", title: "Rep Count", default: step.rep_count }
+                }
+              }
 
+              return <>
+                <Form schema={editStepSchema} onSubmit={form => this.editStep(form, step.id)}>
+                  <button type="submit" className="btn btn-info">Save</button>
+                  <button className="delete-step" onClick={() => { this.deleteStep(step.id) }}>Delete</button>
+                </Form>
+              </>
+            })}
+
+            <h1>Add</h1>
+            <Form schema={addStepSchema} onSubmit={this.createStep} />
+
+          </article>
         </main>
       </ >
-
-      // Put a list of steps, and a button for each to delete that step
-
     );
   }
 }

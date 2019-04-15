@@ -755,6 +755,7 @@ legend {
   font-size: 75%;
   border: #8bc34a 1px solid;
   background-color: #8bc34a;
+  letter-spacing: 2px;
 }
 
 .new-pg button:hover, .edit-pg .btn:hover {
@@ -766,4 +767,23 @@ legend {
 
 textarea {
   resize: vertical;
+}
+
+.delete-step {
+  letter-spacing: 2px;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin: .4rem .2vh;
+  font-family: "Raleway";
+  font-size: 75%;
+  border: #E15241 1px solid;
+  background-color: #E15241;
+}
+
+.delete-step:hover {
+  transition: ease-in;
+  border: #E15241 1px solid;
+  background-color: white;
+  color: black;
 }

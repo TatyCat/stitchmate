@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav'
-// import New from '../pages/New'
-// import EditPattern from '../pages/EditPattern'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -45,14 +43,16 @@ class PatternPg extends Component {
                 <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
                 </Link>
               </button>
-              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/api/patterns/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit Pattern</Link></button>
+
+              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/pattern/edit/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit Pattern</Link></button>
+
               <button className="w3-button w3-ripple pattern-nav-button"><Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link></button>
             </header>
 
             <h1 className="pattern-name stitchBorder">{this.state.pattern.pattern_name}</h1>
 
             <h3>Link to Pattern:
-              <a href={this.state.pattern.pattern_link} target="_blank"> {this.state.pattern.pattern_link}</a>
+              <a href={this.state.pattern.pattern_link} target="_blank" rel="noopener noreferrer">{this.state.pattern.pattern_link}</a>
             </h3>
 
             <br />

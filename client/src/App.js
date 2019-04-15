@@ -16,8 +16,8 @@ class App extends Component {
             <Route path="/new" component={New}></Route>
 
             <Route path="/home" component={HomeProfile}></Route>
-            <Route path="/pattern/:id" component={PatternPg}></Route>
-            <Route path="/api/patterns/:id" component={EditPattern}></Route>
+            <Route exact path="/pattern/:id" component={PatternPg}></Route>
+            <Route exact path="/pattern/edit/:id" component={EditPattern}></Route>
           </Switch>
         </Router>
       </>
