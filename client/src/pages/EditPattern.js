@@ -34,6 +34,15 @@ class EditPattern extends Component {
       })
   }
 
+
+  deletePattern() {
+    axios.delete(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
+      .then(() => {
+        this.props.history.push('/home')
+      })
+  }
+
+
   createStep = form => {
     axios.post(`http://localhost:3000/api/steps`, {
       step: Object.assign(form.formData, { pattern_id: this.state.pattern.id })
@@ -89,13 +98,17 @@ class EditPattern extends Component {
         <main className="edit-pg">
 
           <header>
-            <button className="w3-button w3-ripple pattern-nav-button">
+            <button className="w3-ripple pattern-nav-button">
               <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
               </Link>
             </button>
-            <button className="w3-button w3-ripple pattern-nav-button">
+
+            <button className="w3-ripple pattern-nav-button">
               <Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link>
             </button>
+
+            <button className=" w3-ripple delete-pattern" onClick={(e) => this.deletePattern(e)}>Delete Pattern</button>
+
           </header>
           <article>
             <h1>Edit</h1>

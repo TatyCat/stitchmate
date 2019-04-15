@@ -23,13 +23,6 @@ class PatternPg extends Component {
       })
   }
 
-  deletePattern() {
-    axios.delete(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
-      .then(() => {
-        this.props.history.push('/home')
-      })
-  }
-
 
   render() {
     return (
@@ -96,13 +89,7 @@ class PatternPg extends Component {
                 onChange={this.handleChange}
                 defaultValue={this.state.value}
               />
-              <button className="w3-border-light-green textarea-submit-button ">Submit</button>
-              <br />
 
-              <section>
-                <p className="delete-pattern">
-                  <button className="w3-red w3-btn w3-center w3-round w3-large w3-ripple w3-wide" onClick={(e) => this.deletePattern(e)}>Delete Pattern</button></p>
-              </section>
             </article>
           </main >
 

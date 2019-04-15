@@ -621,11 +621,6 @@ footer p a i {
   border: #E15241 1px solid !important;
 }
 
-.delete-pattern {
-  display: flex;
-  justify-content: center;
-}
-
 input {
   padding: 1vh;
   width: 55vw;
@@ -738,6 +733,21 @@ legend {
 
 .bs-callout, .error-detail, .bs-callout-info {
   display: none;
+}
+
+.delete-pattern {
+  padding: .5rem;
+  margin: .3rem;
+  border: 1px rgb(44, 44, 44) solid;
+  border-radius: 4px;
+  color: black;
+  border: #E15241 1px solid;
+  background-color: white;
+}
+
+.delete-pattern:hover {
+  background-color: #E15241;
+  color: white;
 }
 
 /* New Pattern */
