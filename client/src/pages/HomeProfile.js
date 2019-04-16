@@ -15,7 +15,7 @@ class HomeProfile extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/api/patterns')
+    axios.get('/api/patterns')
       .then(response => {
         this.setState({ patterns: response.data })
       })

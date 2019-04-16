@@ -13,7 +13,7 @@ class EditPattern extends Component {
   }
 
   loadPattern = () => {
-    axios.get(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
+    axios.get(`/api/patterns/${this.props.match.params.id}`)
       .then(response => {
         this.setState({ pattern: response.data })
       })
@@ -28,7 +28,7 @@ class EditPattern extends Component {
 
 
   submitPattern = form => {
-    axios.put(`http://localhost:3000/api/patterns/${this.state.pattern.id}`, { pattern: form.formData })
+    axios.put(`/api/patterns/${this.state.pattern.id}`, { pattern: form.formData })
       .then(response => {
         this.props.history.push(`/pattern/${this.state.pattern.id}`)
       })
@@ -36,7 +36,7 @@ class EditPattern extends Component {
 
 
   deletePattern() {
-    axios.delete(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
+    axios.delete(`/api/patterns/${this.props.match.params.id}`)
       .then(() => {
         this.props.history.push('/home')
       })
@@ -44,7 +44,7 @@ class EditPattern extends Component {
 
 
   createStep = form => {
-    axios.post(`http://localhost:3000/api/steps`, {
+    axios.post(`/api/steps`, {
       step: Object.assign(form.formData, { pattern_id: this.state.pattern.id })
     }).then(reponse => {
       this.loadPattern()
@@ -52,7 +52,7 @@ class EditPattern extends Component {
   }
 
   editStep = (form, step_id) => {
-    axios.put(`http://localhost:3000/api/steps/${step_id}`, {
+    axios.put(`/api/steps/${step_id}`, {
       step: form.formData
     }).then(reponse => {
       this.loadPattern()
@@ -62,7 +62,7 @@ class EditPattern extends Component {
   deleteStep = (id) => {
     console.log(id)
 
-    axios.delete(`http://localhost:3000/api/steps/${id}`)
+    axios.delete(`/api/steps/${id}`)
       .then(() => {
         this.loadPattern()
       })

@@ -6,7 +6,7 @@ import axios from 'axios'
 class New extends Component {
 
   submit = form => {
-    axios.post(`http://localhost:3000/api/patterns`, {
+    axios.post(`/api/patterns`, {
       pattern: form.formData
     })
       .then(response => {

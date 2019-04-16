@@ -14,7 +14,7 @@ class PatternPg extends Component {
   }
 
   loadPattern = () => {
-    axios.get(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
+    axios.get(`/api/patterns/${this.props.match.params.id}`)
       .then(response => {
         this.setState({ pattern: response.data })
       })
@@ -28,41 +28,41 @@ class PatternPg extends Component {
   }
 
   incrementRow = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: step.row_count + 1 })
+    axios.put(`/api/steps/${step.id}`, { row_count: step.row_count + 1 })
       .then(response => {
         this.loadPattern()
       })
   }
 
   decrementRow = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: step.row_count - 1 })
+    axios.put(`/api/steps/${step.id}`, { row_count: step.row_count - 1 })
       .then(response => {
         this.loadPattern()
       })
   }
 
   incRep = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: step.rep_count + 1 })
+    axios.put(`/api/steps/${step.id}`, { rep_count: step.rep_count + 1 })
       .then(response => {
         this.loadPattern()
       })
   }
 
   decRep = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: step.rep_count - 1 })
+    axios.put(`/api/steps/${step.id}`, { rep_count: step.rep_count - 1 })
       .then(response => {
         this.loadPattern()
       })
   }
 
   resetCount = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: 0 })
+    axios.put(`/api/steps/${step.id}`, { row_count: 0 })
       .then(response => {
         this.loadPattern()
       })
   }
   resetRep = (step) => {
-    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: 0 })
+    axios.put(`/api/steps/${step.id}`, { rep_count: 0 })
       .then(response => {
         this.loadPattern()
       })
