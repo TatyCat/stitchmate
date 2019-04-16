@@ -14,13 +14,13 @@ class Landing extends Component {
               StitchMate
             </Link>
           </h1>
-          <div><Link to="/home">Register / Log In</Link></div>
+          <div><Link to="/home">Log In</Link></div>
         </nav>
         <main className="main-container landing-pg">
           <header>
-            <h1>Knit Easy With StitchMate...</h1>
+            <h1>Knit Easy with StitchMate</h1>
             <h2>A Row Counter App optimized for knitting and crocheting</h2>
-            <button><Link to="/home"><span>Register / Log In</span></Link></button>
+            <button><Link to="/home"><span>Get Started</span></Link></button>
           </header>
           <article>
             <h3>The <span className="stitchmate-post-it"><i className="far fa-sticky-note"></i></span><span className="stitchmate-logo-lettering">StitchMate</span> Way</h3>
