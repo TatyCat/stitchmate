@@ -4,7 +4,7 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = Step.all
+    @steps = Step.all.order("step_number ASC")
   end
 
   # GET /steps/1
@@ -15,7 +15,7 @@ class StepsController < ApplicationController
   # POST /steps
   # POST /steps.json
   def create
-    @step = Step.new(step_params)
+    @step = Step.new(step_params) 
 
     if @step.save
       render :show, status: :created, location: @step

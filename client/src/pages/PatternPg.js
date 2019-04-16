@@ -13,7 +13,7 @@ class PatternPg extends Component {
     }
   }
 
-  componentDidMount() {
+  loadPattern = () => {
     axios.get(`http://localhost:3000/api/patterns/${this.props.match.params.id}`)
       .then(response => {
         this.setState({ pattern: response.data })
@@ -23,6 +23,50 @@ class PatternPg extends Component {
       })
   }
 
+  componentDidMount() {
+    this.loadPattern()
+  }
+
+  incrementRow = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: step.row_count + 1 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
+
+  decrementRow = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: step.row_count - 1 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
+
+  incRep = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: step.rep_count + 1 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
+
+  decRep = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: step.rep_count - 1 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
+
+  resetCount = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { row_count: 0 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
+  resetRep = (step) => {
+    axios.put(`http://localhost:3000/api/steps/${step.id}`, { rep_count: 0 })
+      .then(response => {
+        this.loadPattern()
+      })
+  }
 
   render() {
     return (
@@ -32,14 +76,20 @@ class PatternPg extends Component {
         <div>
           <main id="pattern-pg">
             <header>
-              <button className="w3-button w3-ripple pattern-nav-button">
-                <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
-                </Link>
-              </button>
 
-              <button className="w3-button w3-ripple pattern-nav-button"><Link to={`/pattern/edit/${this.props.match.params.id}`}><i className="far fa-edit"></i> Edit / Add to Pattern</Link></button>
+              <Link to={'/home'}>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-folder-open"></i> Projects in Progress</button>
+              </Link>
 
-              <button className="w3-button w3-ripple pattern-nav-button"><Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link></button>
+              <Link to={'/new'}>
+                <button className="w3-button w3-ripple pattern-nav-button">
+                  <i className="fas fa-tasks"></i> Create a New Pattern</button>
+              </Link>
+
+              <Link to={`/pattern/edit/${this.props.match.params.id}`}>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-edit"></i> Edit / Add to Pattern</button>
+              </Link>
+
             </header>
 
             <h1 className="pattern-name stitchBorder">{this.state.pattern.pattern_name}</h1>
@@ -57,27 +107,29 @@ class PatternPg extends Component {
                     <p className="patternText"><span className="stepNumberCSS">{step.step_number}. </span>
                       {step.pattern_step}
                     </p>
+
                     <div className="rowCounter">
                       <button className="w3-wide w3-border w3-border-light-green w3-small w3-ripple w3-btn w3-round w3-hover-light-green " id="step1">Close Counter</button>
 
-                      {/* Component */}
+                      <div className="rowCounterCard">
+                        <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
+
+                        <button onClick={() => { this.incrementRow(step) }} className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
+                        <p>Row: {step.row_count}</p>
+
+                        <p><button onClick={() => { this.resetCount(step) }} className="w3-ripple w3-danger">Reset</button></p>
+                      </div>
 
                       <div className="rowCounterCard">
-                        <button className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
-                        <button className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
-                        <p>Row: {step.row_count}</p>
-                        <p><button className="w3-ripple w3-danger">Reset</button></p>
-                      </div>
-                      <div className="rowCounterCard">
-                        <button className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
-                        <button className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
+                        <button onClick={() => { this.decRep(step) }} className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
+                        <button onClick={() => { this.incRep(step) }} className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
                         <p>Rep: {step.rep_count}</p>
-                        <p><button className="w3-ripple w3-danger">Reset</button></p>
+                        <p><button onClick={() => { this.resetRep(step) }} className="w3-ripple w3-danger">Reset</button></p>
                       </div>
+
                     </div>
                   </div>
                 </div>
-
               ))
             }
 
@@ -85,10 +137,8 @@ class PatternPg extends Component {
             <section className="notes-section">
               <h2>Notes</h2>
               {this.state.pattern.pattern_notes}
-
             </section>
           </main >
-
         </div >
       </>
     );

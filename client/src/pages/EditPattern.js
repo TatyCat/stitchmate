@@ -20,8 +20,8 @@ class EditPattern extends Component {
       .catch(error => {
         console.log(error)
       })
-
   }
+
   componentDidMount() {
     this.loadPattern()
   }
@@ -98,16 +98,17 @@ class EditPattern extends Component {
         <main className="edit-pg">
 
           <header>
-            <button className="w3-ripple pattern-nav-button">
-              <Link to={'/new'}><i className="fas fa-tasks"></i> Create a New Pattern
-              </Link>
+            <Link to={`/pattern/${this.props.match.params.id}`}>
+              <button className="w3-ripple pattern-nav-button"><i className="fas fa-arrow-left"></i> Back to Pattern
             </button>
+            </Link>
 
-            <button className="w3-ripple pattern-nav-button">
-              <Link to={'/home'}><i className="far fa-folder-open"></i> Projects in Progress</Link>
+            <Link to={'/new'}><button className="w3-ripple pattern-nav-button">
+              <i className="fas fa-tasks"></i> Create a New Pattern
             </button>
+            </Link>
 
-            <button className=" w3-ripple delete-pattern" onClick={(e) => this.deletePattern(e)}>Delete Pattern</button>
+            <button className=" w3-ripple delete-pattern" onClick={(e) => this.deletePattern(e)}> <i class="fas fa-trash"></i> Delete Pattern</button>
 
           </header>
           <article>
@@ -116,8 +117,6 @@ class EditPattern extends Component {
               <Form schema={patternSchema}
                 onSubmit={this.submitPattern} />
             </section>
-
-            {/* List of steps, each with a delete button -map*/}
 
             {this.state.pattern.steps.map(step => {
               const editStepSchema = {

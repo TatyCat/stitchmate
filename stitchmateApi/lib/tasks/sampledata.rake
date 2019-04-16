@@ -19,14 +19,14 @@ namespace :sampledata do
     # t.boolean "counter_open"
     # t.integer "row_count"
     # t.integer "rep_count"
-    pattern.steps.create!(step_number: 1, pattern_step: "Cast on 44 stitches.", counter_open: false, row_count: 42, rep_count: 12)
+    pattern.steps.create!(step_number: 10, pattern_step: "Cast on 44 stitches.", counter_open: false, row_count: 42, rep_count: 12)
     pattern.steps.create!(step_number: 2, pattern_step: "Purl. Knit. Repeat each row until you nearly run out of yarn, ending with Row 1.", counter_open: false, row_count: 42, rep_count: 12)
     pattern.steps.create!(step_number: 3, pattern_step: "Bind off loosely in knit stitch. Weave in the ends and you’re done!", counter_open: false, row_count: 0, rep_count: 0)
 
 
     pattern = Pattern.create!(pattern_name: "Woven Cashmere Ombré Scarf", pattern_link: "https://www.purlsoho.com/create/2018/04/13/woven-cashmere-ombre-scarves/", pattern_notes: "Gina would look great in this! Christmas Gift!")
 
-    pattern.steps.create!(step_number: 1, pattern_step: "Set up the warping peg 110 inches from the front of the loom, which is at the front edge of the table.", counter_open: false, row_count: 42, rep_count: 12)
+    pattern.steps.create!(step_number: 9, pattern_step: "Set up the warping peg 110 inches from the front of the loom, which is at the front edge of the table.", counter_open: false, row_count: 42, rep_count: 12)
     pattern.steps.create!(step_number: 2, pattern_step: "With a 10-dent reed in place and using Yarn A (see Notes), begin by pulling the first loop of yarn through the 3rd slat from the right end of the reed.", counter_open: false, row_count: 42, rep_count: 12)
     pattern.steps.create!(step_number: 3, pattern_step: "Working from right to left, pull Yarn A through an additional 8 slats. You will have threaded 9 slats, giving you 18 warp ends.", counter_open: false, row_count: 42, rep_count: 12)
     pattern.steps.create!(step_number: 4, pattern_step: "Cut Yarn A and tie it to the back apron rod", counter_open: false, row_count: 42, rep_count: 12)
