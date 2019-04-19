@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <>
         <footer>
-          <p>Contact - Follow - Donate:</p>
+          <p>Contact - Follow :</p>
           <p>
             <a href="https://twitter.com/DevTaty" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/tatyannac/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
@@ -14,7 +14,7 @@ class Footer extends Component {
             </a>
           </p>
 
-          <p>Copyright &copy;2018 Tatyanna Cobb. All rights reserved. </p>
+          <p>Copyright &copy;2019 Tatyanna Cobb. All rights reserved. </p>
         </footer>
 
       </>
