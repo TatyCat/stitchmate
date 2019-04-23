@@ -4,7 +4,7 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = Step.all.order("step_number ASC")
+    @steps = Step.all
   end
 
   # GET /steps/1

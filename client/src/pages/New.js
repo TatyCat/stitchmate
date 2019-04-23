@@ -11,7 +11,7 @@ class New extends Component {
     })
       .then(response => {
         const newPattern = response.data
-        this.props.history.push(`/pattern/${newPattern.id}`)
+        this.props.history.push(`/pattern/edit/${newPattern.id}`)
       })
   }
 
