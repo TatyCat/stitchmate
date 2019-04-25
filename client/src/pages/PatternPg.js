@@ -87,7 +87,11 @@ class PatternPg extends Component {
               </Link>
 
               <Link to={`/pattern/edit/${this.props.match.params.id}`}>
-                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-edit"></i> Edit / Add to Pattern</button>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="fas fa-eraser"></i> Edit Pattern</button>
+              </Link>
+
+              <Link to={`/pattern/edit/${this.props.match.params.id}`}>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="fas fa-plus-circle"></i> Add Steps</button>
               </Link>
 
             </header>
