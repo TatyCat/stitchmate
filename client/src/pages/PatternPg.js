@@ -68,6 +68,47 @@ class PatternPg extends Component {
       })
   }
 
+  openCounterCard = (step) => {
+    let counterStatus = !step.counter_open
+    console.log(counterStatus)
+
+    axios.put(`/api/steps/${step.id}`, { counter_open: counterStatus })
+      .then(response => {
+        console.log("it happened")
+        this.loadPattern()
+      })
+  }
+
+  counterRepresent = (step) => {
+    if (!step.counter_open) {
+      return <button className="w3-ripple row-counter-activator" id="step1" onClick={() => { this.openCounterCard(step) }}>Open Counter</button>
+
+    } else if (step.counter_open) {
+      return (
+        <>
+          <button className="w3-ripple row-counter-activator" id="step1" onClick={() => { this.openCounterCard(step) }}>Close Counter</button>
+          <div className="rowCounter">
+            <div className="rowCounterCard">
+              <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  rowCountButton"><i className="fas fa-minus"></i></button>
+
+              <button onClick={() => { this.incrementRow(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
+              <p>ROW: {step.row_count}</p>
+
+              <p><button onClick={() => { this.resetCount(step) }} className="w3-ripple reset-step ">Reset</button></p>
+            </div>
+
+            <div className="rowCounterCard">
+              <button onClick={() => { this.decRep(step) }} className="rowCountButton"><i className="fas fa-minus"></i></button>
+              <button onClick={() => { this.incRep(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
+              <p>REP: {step.rep_count}</p>
+              <p><button onClick={() => { this.resetRep(step) }} className="w3-ripple reset-step">Reset</button></p>
+            </div>
+          </div>
+        </>
+      )
+    }
+  }
+
   render() {
     return (
       <>
@@ -111,27 +152,8 @@ class PatternPg extends Component {
                     <p className="patternText"><span className="stepNumberCSS">{step.step_number}. </span>
                       {step.pattern_step}
                     </p>
+                    {this.counterRepresent(step)}
 
-                    <button className="w3-ripple row-counter-activator" id="step1">Close Counter</button>
-
-                    <div className="rowCounter">
-                      <div className="rowCounterCard">
-                        <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  rowCountButton"><i className="fas fa-minus"></i></button>
-
-                        <button onClick={() => { this.incrementRow(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
-                        <p>ROW: {step.row_count}</p>
-
-                        <p><button onClick={() => { this.resetCount(step) }} className="w3-ripple reset-step ">Reset</button></p>
-                      </div>
-
-                      <div className="rowCounterCard">
-                        <button onClick={() => { this.decRep(step) }} className="rowCountButton"><i className="fas fa-minus"></i></button>
-                        <button onClick={() => { this.incRep(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
-                        <p>REP: {step.rep_count}</p>
-                        <p><button onClick={() => { this.resetRep(step) }} className="w3-ripple reset-step">Reset</button></p>
-                      </div>
-
-                    </div>
                   </div>
                 </div>
               ))
