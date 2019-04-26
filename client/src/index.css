@@ -589,6 +589,7 @@ footer p a i {
   border: 1px rgb(44, 44, 44) solid;
   background: white;
   border-radius: 4px;
+  min-width: 25vh;
 }
 
 .pattern-nav-button:hover {

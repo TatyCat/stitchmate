@@ -5,6 +5,7 @@ import PatternPg from './pages/PatternPg';
 import New from './pages/New'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import EditPattern from './pages/EditPattern';
+import AddSteps from './pages/AddSteps';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/home" component={HomeProfile}></Route>
             <Route exact path="/pattern/:id" component={PatternPg}></Route>
             <Route exact path="/pattern/edit/:id" component={EditPattern}></Route>
+            <Route exact path="/pattern/edit/:id" component={AddSteps}></Route>
           </Switch>
         </Router>
       </>

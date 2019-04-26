@@ -77,13 +77,13 @@ class PatternPg extends Component {
           <main id="pattern-pg">
             <header>
 
-              <Link to={'/home'}>
-                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-folder-open"></i> Projects in Progress</button>
-              </Link>
-
               <Link to={'/new'}>
                 <button className="w3-button w3-ripple pattern-nav-button">
                   <i className="fas fa-tasks"></i> Create a New Pattern</button>
+              </Link>
+
+              <Link to={'/home'}>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-folder-open"></i> Projects in Progress</button>
               </Link>
 
               <Link to={`/pattern/edit/${this.props.match.params.id}`}>
