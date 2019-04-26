@@ -116,19 +116,19 @@ class PatternPg extends Component {
                       {/* <button className="w3-wide w3-border w3-border-light-green w3-small w3-ripple w3-btn w3-round w3-hover-light-green " id="step1">Close Counter</button> */}
 
                       <div className="rowCounterCard">
-                        <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
+                        <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  rowCountButton"><i className="fas fa-minus"></i></button>
 
-                        <button onClick={() => { this.incrementRow(step) }} className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
-                        <p>Row: {step.row_count}</p>
+                        <button onClick={() => { this.incrementRow(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
+                        <p>ROW: {step.row_count}</p>
 
-                        <p><button onClick={() => { this.resetCount(step) }} className="w3-ripple w3-danger">Reset</button></p>
+                        <p><button onClick={() => { this.resetCount(step) }} className="w3-ripple reset-step ">Reset</button></p>
                       </div>
 
                       <div className="rowCounterCard">
-                        <button onClick={() => { this.decRep(step) }} className="w3-ripple  w3-border-light-green"><i className="fas fa-minus"></i></button>
-                        <button onClick={() => { this.incRep(step) }} className="w3-ripple  w3-border-light-green" ><i className="fas fa-plus"></i></button>
-                        <p>Rep: {step.rep_count}</p>
-                        <p><button onClick={() => { this.resetRep(step) }} className="w3-ripple w3-danger">Reset</button></p>
+                        <button onClick={() => { this.decRep(step) }} className="rowCountButton"><i className="fas fa-minus"></i></button>
+                        <button onClick={() => { this.incRep(step) }} className="w3-ripple  rowCountButton" ><i className="fas fa-plus"></i></button>
+                        <p>REP: {step.rep_count}</p>
+                        <p><button onClick={() => { this.resetRep(step) }} className="w3-ripple reset-step">Reset</button></p>
                       </div>
 
                     </div>

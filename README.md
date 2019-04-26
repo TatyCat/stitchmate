@@ -1,24 +1,8 @@
-# README
+# StitchMate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Have you ever been knitting or crocheting and needed to keep track of where you were in the pattern? Maybe you're a creator of knitting and/or crochetting patterns and need a mobile friendly way to record your awesome and original patterns. 
 
-Things you may want to cover:
+****
+Keep track of your rows and stitch with me, StitchMate
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+StitchMate helps intelligent and crafty people keep count of their craft stitches as they follow original and curated patterns.

@@ -1,8 +1,6 @@
 /* Font */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:300');
-/* @import url('https://fonts.googleapis.com/css?family=Raleway'); */
-
 /* General */
 
 :root {
@@ -182,7 +180,6 @@ nav ul li a:hover {
   position: relative;
   z-index: 5;
   cursor: pointer;
-  /* background-color: #f2f7e7b4; */
 }
 
 /* LANDING PAGE */
@@ -354,7 +351,6 @@ nav ul li a:hover {
   border: rgb(237, 237, 227);
   color: black;
   overflow: hidden;
-  /* background-color: rgb(238, 238, 237); */
   background-color: white;
 }
 
@@ -589,11 +585,23 @@ footer p a i {
   border: 1px rgb(44, 44, 44) solid;
   background: white;
   border-radius: 4px;
-  min-width: 25vh;
+  min-width: 17vh;
 }
 
 .pattern-nav-button:hover {
   opacity: .7;
+}
+
+.rowCounter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  border: rgb(242, 242, 242) 1px solid !important;
+  margin-bottom: 6vh;
+  background-image: url("images/steve-johnson-551225-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
 }
 
 .rowCounter button {
@@ -603,19 +611,21 @@ footer p a i {
   border-radius: 4px;
   margin: .4rem .6rem;
   font-family: "Raleway";
-  font-size: 75%;
+  font-size: 57%;
 }
 
-.w3-border-light-green {
-  border: #8bc34a 1px solid !important;
+.rowCounter button i {
+  font-size: 165%;
 }
 
-.w3-border-light-green:hover {
-  background-color: #8bc34a !important;
+.rowCountButton {
+  border: rgb(46, 48, 48) 1px solid !important;
 }
 
-.w3-danger:hover {
-  border: #E15241 1px solid !important;
+.rowCountButton:hover {
+  background-color: yellowgreen;
+  color: white;
+  border-color: rgb(134, 179, 44) !important;
 }
 
 input {
@@ -623,6 +633,12 @@ input {
   width: 55vw;
   resize: horizontal;
   overflow: auto;
+}
+
+.reset-step:hover {
+  border: rgb(197, 71, 57) 1px solid !important;
+  background-color: #E15241;
+  color: white;
 }
 
 .delete-pattern button {
@@ -646,12 +662,17 @@ input {
 
 .rowCounterCard {
   text-align: center;
-  border: rgb(158, 158, 158) 1px solid !important;
   border-radius: 4px;
-  margin: 1rem 4.5rem;
+  margin: 1rem 2.5rem;
   padding-top: 1rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  max-width: 50%;
+}
+
+.rowCounterCard p {
+  font-size: 2.3vh;
+  color: white;
+  text-shadow: .1px 2px 1px rgb(51, 56, 58);
+  letter-spacing: .3ch;
+  font-weight: 900;
 }
 
 .w3-wide {
@@ -659,7 +680,6 @@ input {
 }
 
 .notes-section {
-  width: 80%;
   margin: 3rem 0;
 }
 
