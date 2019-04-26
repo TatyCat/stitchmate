@@ -112,9 +112,9 @@ class PatternPg extends Component {
                       {step.pattern_step}
                     </p>
 
-                    <div className="rowCounter">
-                      {/* <button className="w3-wide w3-border w3-border-light-green w3-small w3-ripple w3-btn w3-round w3-hover-light-green " id="step1">Close Counter</button> */}
+                    <button className="w3-ripple row-counter-activator" id="step1">Close Counter</button>
 
+                    <div className="rowCounter">
                       <div className="rowCounterCard">
                         <button onClick={() => { this.decrementRow(step) }} className="w3-ripple  rowCountButton"><i className="fas fa-minus"></i></button>
 
