@@ -107,8 +107,22 @@ class PatternPg extends Component {
     }
   }
 
-  notesSectionToggle = (step) => {
-    console.log(step)
+  notesSectionToggle = () => {
+    // console.log(this.state.pattern.pattern_notes)
+    if (this.state.pattern.pattern_notes != " ") {
+      return (
+        <>
+          <section className="notes-section">
+            <h2>Notes</h2>
+            {this.state.pattern.pattern_notes}
+          </section>
+        </>
+      )
+    } else if (this.state.pattern.pattern_notes == " ") {
+      return (
+        < section className="notes-hidden " ></section >
+      )
+    }
   }
 
   render() {
@@ -156,11 +170,12 @@ class PatternPg extends Component {
               ))
             }
 
-
-            <section className="notes-section">
+            {this.notesSectionToggle()}
+            {/* <section className="notes-section">
               <h2>Notes</h2>
-              {this.state.pattern.pattern_notes ? 'null' : 'NOTHING'}
-            </section>
+              {this.state.pattern.pattern_notes}
+            </section> */}
+
           </main >
         </div >
       </>

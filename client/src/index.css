@@ -558,7 +558,7 @@ footer p a i {
 /* Pattern Page */
 
 #pattern-pg {
-  margin: 0 5%;
+  margin: 0 4vh;
   margin-top: 1rem;
 }
 
@@ -594,6 +594,10 @@ footer p a i {
 
 .pattern-nav-button:hover {
   opacity: .7;
+}
+
+.stepNumberCSS {
+  font-size: 3vh;
 }
 
 .patternText {
@@ -713,8 +717,14 @@ input {
   margin: 3rem 0;
   margin-right: 5%;
   padding: 3vh;
-  border: rgb(230, 230, 230) 1px solid;
+  border: #e6e6e6 1px solid;
   border-radius: 3px;
+}
+
+.notes-hidden {
+  margin: 3rem 0;
+  margin-bottom: 6rem;
+  border: none;
 }
 
 textarea {
