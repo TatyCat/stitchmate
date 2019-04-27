@@ -14,12 +14,17 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing}></Route>
+
             <Route path="/new" component={New}></Route>
 
             <Route path="/home" component={HomeProfile}></Route>
+
             <Route exact path="/pattern/:id" component={PatternPg}></Route>
+
             <Route exact path="/pattern/edit/:id" component={EditPattern}></Route>
-            <Route exact path="/pattern/edit/:id" component={AddSteps}></Route>
+
+            <Route exact path="/steps/:id" component={AddSteps}></Route>
+
           </Switch>
         </Router>
       </>

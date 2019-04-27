@@ -42,15 +42,6 @@ class EditPattern extends Component {
       })
   }
 
-
-  createStep = form => {
-    axios.post(`/api/steps`, {
-      step: Object.assign(form.formData, { pattern_id: this.state.pattern.id })
-    }).then(reponse => {
-      this.loadPattern()
-    })
-  }
-
   editStep = (form, step_id) => {
     axios.put(`/api/steps/${step_id}`, {
       step: form.formData
@@ -60,13 +51,10 @@ class EditPattern extends Component {
   }
 
   deleteStep = (id) => {
-    console.log(id)
-
     axios.delete(`/api/steps/${id}`)
       .then(() => {
         this.loadPattern()
       })
-
   }
 
   render() {
@@ -78,17 +66,6 @@ class EditPattern extends Component {
         pattern_name: { type: "string", title: "Pattern Name", default: this.state.pattern.pattern_name },
         pattern_link: { type: "string", title: "Pattern Link", default: this.state.pattern.pattern_link },
         pattern_notes: { type: "string", title: "Pattern Notes", default: this.state.pattern.pattern_notes }
-      }
-    }
-
-    const addStepSchema = {
-      title: "Add Step",
-      type: "object",
-      properties: {
-        step_number: { type: "number", title: "Step Number" },
-        pattern_step: { type: "string", title: "Pattern Step" },
-        row_count: { type: "number", title: "Row Count", default: 0 },
-        rep_count: { type: "number", title: "Rep Count", default: 0 }
       }
     }
 
@@ -116,6 +93,7 @@ class EditPattern extends Component {
             <section>
               <Form schema={patternSchema}
                 onSubmit={this.submitPattern} />
+
             </section>
 
             {this.state.pattern.steps.map(step => {
@@ -133,15 +111,19 @@ class EditPattern extends Component {
 
               return <>
                 <Form schema={editStepSchema} onSubmit={form => this.editStep(form, step.id)}>
-                  <button type="submit" className="btn btn-info">Save</button>
-                  <button className="delete-step" onClick={() => { this.deleteStep(step.id) }}>Delete</button>
+                  <button type="submit" className="btn btn-info">Update Step</button>
+                  <button className="delete-step" onClick={() => { this.deleteStep(step.id) }}>Delete Step</button>
                 </Form>
               </>
             })}
 
-            <h1>Add</h1>
-            <Form schema={addStepSchema} onSubmit={this.createStep} />
+            {/* <h1>Add</h1>
+            <Form schema={addStepSchema} onSubmit={this.createStep} /> */}
 
+
+            <Link to={`/steps`}>
+              <button className="w3-button w3-ripple pattern-nav-button"><i className="fas fa-plus-circle"></i> Add a Step</button>
+            </Link>
           </article>
         </main>
       </ >
