@@ -108,7 +108,6 @@ class PatternPg extends Component {
   }
 
   notesSectionToggle = () => {
-    // console.log(this.state.pattern.pattern_notes)
     if (this.state.pattern.pattern_notes != " ") {
       return (
         <>
@@ -171,10 +170,6 @@ class PatternPg extends Component {
             }
 
             {this.notesSectionToggle()}
-            {/* <section className="notes-section">
-              <h2>Notes</h2>
-              {this.state.pattern.pattern_notes}
-            </section> */}
 
           </main >
         </div >
