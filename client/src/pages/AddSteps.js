@@ -30,7 +30,7 @@ class AddSteps extends Component {
 
           <header>
             <Link to={`/pattern/${this.props.match.params.id}`}>
-              <button className="w3-ripple pattern-nav-button"><i className="fas fa-arrow-left"></i> Back to Pattern
+              <button className="w3-ripple pattern-nav-button"><i className="fas fa-arrow-left"></i> Pattern
             </button>
             </Link>
           </header>

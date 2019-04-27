@@ -107,8 +107,8 @@ class PatternPg extends Component {
     }
   }
 
-  notesSectionToggle = () => {
-
+  notesSectionToggle = (step) => {
+    console.log(step)
   }
 
   render() {
@@ -120,13 +120,8 @@ class PatternPg extends Component {
           <main id="pattern-pg">
             <header>
 
-              <Link to={'/new'}>
-                <button className="w3-button w3-ripple pattern-nav-button">
-                  <i className="fas fa-tasks"></i> Create a New Pattern</button>
-              </Link>
-
               <Link to={'/home'}>
-                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-folder-open"></i> Projects in Progress</button>
+                <button className="w3-button w3-ripple pattern-nav-button"><i className="far fa-folder-open"></i> All Projects</button>
               </Link>
 
               <Link to={`/pattern/edit/${this.props.match.params.id}`}>
@@ -164,7 +159,7 @@ class PatternPg extends Component {
 
             <section className="notes-section">
               <h2>Notes</h2>
-              {this.state.pattern.pattern_notes}
+              {this.state.pattern.pattern_notes ? 'null' : 'NOTHING'}
             </section>
           </main >
         </div >
