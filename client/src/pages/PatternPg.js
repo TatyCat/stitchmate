@@ -70,11 +70,9 @@ class PatternPg extends Component {
 
   openCounterCard = (step) => {
     let counterStatus = !step.counter_open
-    console.log(counterStatus)
 
     axios.put(`/api/steps/${step.id}`, { counter_open: counterStatus })
       .then(response => {
-        console.log("it happened")
         this.loadPattern()
       })
   }
@@ -107,6 +105,10 @@ class PatternPg extends Component {
         </>
       )
     }
+  }
+
+  notesSectionToggle = () => {
+
   }
 
   render() {
