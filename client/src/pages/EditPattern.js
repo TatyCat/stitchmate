@@ -117,11 +117,7 @@ class EditPattern extends Component {
               </>
             })}
 
-            {/* <h1>Add</h1>
-            <Form schema={addStepSchema} onSubmit={this.createStep} /> */}
-
-
-            <Link to={`/steps`}>
+            <Link to={`/steps/${this.state.pattern.id}`}>
               <button className="w3-button w3-ripple pattern-nav-button"><i className="fas fa-plus-circle"></i> Add a Step</button>
             </Link>
           </article>
